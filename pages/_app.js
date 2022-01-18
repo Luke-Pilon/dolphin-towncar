@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
+import Layout from '../components/layout';
 
 function MyApp({ Component, pageProps }) {
     return (
@@ -10,7 +11,9 @@ function MyApp({ Component, pageProps }) {
                     content='initial-scale=1.0, width=device-width'
                 />
             </Head>
-            <Component {...pageProps} />
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
         </>
     );
 }
