@@ -1,10 +1,26 @@
-.header {
-    border-bottom:1px solid black;
+.header {    
+    height: 60px;
 }
 
 .nav {
     display:flex;
-    height: 80px;
+    height: 60px;
+}
+
+.brandLinkItem {
+    flex-grow: 1;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.brandLink {
+    font-size:1.5rem;
+    color: var(--brand-primary);
+    font-weight:bold;
+    
 }
 
 /* Hamburger toggle */
@@ -12,8 +28,11 @@
     flex-grow:0;
     cursor: pointer;
     color: var(--brand-primary);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebarToggle .toggler {
@@ -79,27 +98,36 @@
     top:0;
     transform: rotate(90deg);
 }
+/* End hamburger toggle */
 
 /* Togglable side nav */
-
 
 .sidebar {
     left: -100%;
     position:relative;
     visibility: visible;
     height:100vh;
-    width: 50%;
+    width: 75%;
     transition: all .4s ease 0s;
-    background-color: black;
+    background-color: #f8f8f8;
 }
 
-.brandLinkItem {
-    flex-grow: 1;
-    text-align:center;
+.sidebar ul {
+    display:flex;
+    flex-direction: column;
+    align-items:flex-end;
 }
-.brandLink {
-    font-size:1.5rem;
+
+.sidebar li {
+    padding:1rem 2rem;
+    font-size: 1.5rem;
     color: var(--brand-primary);
-    font-weight:bold;
-    flex-grow:1;
+}
+
+.sidebar li:first-of-type {
+    padding-top:3rem;
+}
+
+.sidebar a:hover {
+    filter:brightness(50%);
 }
