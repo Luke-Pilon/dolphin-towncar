@@ -1,0 +1,105 @@
+.header {
+    border-bottom:1px solid black;
+}
+
+.nav {
+    display:flex;
+    height: 80px;
+}
+
+/* Hamburger toggle */
+.sidebarToggle {
+    flex-grow:0;
+    cursor: pointer;
+    color: var(--brand-primary);
+    width: 50px;
+    height: 50px;
+}
+
+.sidebarToggle .toggler {
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+}
+
+.sidebarToggle .hamburger {
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding:1rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hamburger lines */
+.sidebarToggle .hamburger > div {
+    position:relative;
+    width:100%;
+    height:2px;
+    background-color: var(--brand-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+/* Top and bottom line */
+.sidebarToggle .hamburger > div::before,
+.sidebarToggle .hamburger > div::after {
+    content:'';
+    position: absolute;
+    z-index:1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+/* moves bottom line down */
+.sidebarToggle .hamburger > div::after {
+    top: 10px;
+}
+
+/* Toggle animation */
+.sidebarToggle .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.sidebarToggle .toggler:checked + .hamburger > div:before,
+.sidebarToggle .toggler:checked + .hamburger > div:after {
+    top:0;
+    transform: rotate(90deg);
+}
+
+/* Togglable side nav */
+
+
+.sidebar {
+    left: -100%;
+    position:relative;
+    visibility: visible;
+    height:100vh;
+    width: 50%;
+    transition: all .4s ease 0s;
+    background-color: black;
+}
+
+.brandLinkItem {
+    flex-grow: 1;
+    text-align:center;
+}
+.brandLink {
+    font-size:1.5rem;
+    color: var(--brand-primary);
+    font-weight:bold;
+    flex-grow:1;
+}
