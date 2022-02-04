@@ -14,10 +14,14 @@ export default function Header() {
         //Add event listener to the window. If click is not on the toggle or the sidebar
         //the sidebar will close - allows user to click outside the sidebar instead of only
         //on the toggle to close the sidebar
+        //Sidebar will also close if any <a> tags are clicked
         window.addEventListener('click', (e) => {
             if (
-                !document.getElementById('sidebar').contains(e.target) &&
-                !document.getElementById('sidebar-toggle').contains(e.target)
+                (!document.getElementById('sidebar').contains(e.target) &&
+                    !document
+                        .getElementById('sidebar-toggle')
+                        .contains(e.target)) ||
+                e.target.tagName == 'A'
             ) {
                 document.getElementById('toggle').checked = false;
                 sidebar.style.left = '-100%';
@@ -38,16 +42,17 @@ export default function Header() {
                         className={styles.toggler}
                         id='toggle'
                     />
-                    <div className={styles.hamburger}>
+                    <div className={styles.hamburger} aria-hidden='true'>
                         <div></div>
                     </div>
                 </a>
                 <div className={styles.brandLinkItem}>
-                    <Link href='/'>
+                    <Link href='/' /*TODO center text in viewport */>
                         <a className={styles.brandLink}>Dolphin Limo LLC</a>
                     </Link>
                 </div>
             </nav>
+
             <div className={styles.sidebar} id='sidebar'>
                 <nav>
                     <ul>
@@ -57,23 +62,23 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/rates'>
+                            <Link href='/#rates'>
                                 <a>Rates</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/contact'>
-                                <a>Contact</a>
+                            <Link href='/#testimonials'>
+                                <a>Testimonials</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/about'>
+                            <Link href='/#about'>
                                 <a>About</a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/testimonials'>
-                                <a>Testimonials</a>
+                            <Link href='/#contact'>
+                                <a>Contact</a>
                             </Link>
                         </li>
                     </ul>
