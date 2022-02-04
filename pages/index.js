@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/index.module.css';
 import landingImage from '../public/suburban.jpg';
+import Testimonials from '../components/testimonials';
+let testimonials = require('../utils/testimonials.json');
 
 export default function Home() {
     return (
@@ -54,6 +56,9 @@ export default function Home() {
                     Minneapolis-Saint Paul International Airport, Mystic Lake
                     Casino, Canterbury Park, and the Twin Cities suburbs.
                 </p>
+            </section>
+            <section id='testimonials' className={styles.section}>
+                <Testimonials testimonials={testimonials.testimonials} />
             </section>
 
             <section
