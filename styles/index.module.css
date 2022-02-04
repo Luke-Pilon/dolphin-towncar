@@ -1,0 +1,87 @@
+.landing {
+    text-align:center;
+    line-height:1.6;
+    width: 90vw;
+    margin:auto;
+}
+
+.landing h1 {
+    color:var(--brand-primary);
+}
+
+.landing p {
+    font-size: 1rem;
+}
+
+.actionButtonsContainer {
+    display:flex;
+    gap: 1rem;
+}
+
+.actionButton {
+    display:inline-block;
+    padding: .5rem 1rem;
+    margin: 0;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:10px;
+    font-weight:600;
+    transition: all .4s ease 0s;
+
+}
+
+.borderButton {
+    flex: 1 1 0px;
+    border: solid 2px var(--brand-primary);
+    background-color: white;
+    padding: calc(.5rem - 2px) calc(1rem - 2px);
+    color: var(--brand-primary);
+}
+
+.borderButton:hover {
+    background-color: var(--brand-primary);
+    color:white;
+}
+
+.solidButton {
+    flex: 1 1 0px;
+    background-color: var(--brand-primary);
+    color:white;
+}
+.solidButton:hover {
+    background-color:  #384061;
+}
+
+.section {
+    text-align:center;
+    line-height:1.6;
+    width: 90vw;
+    margin:auto;
+    margin-top:1rem;
+    padding-top:1rem;
+    border-top: 1px solid var(--brand-primary);
+}
+
+.section p {
+    margin:0;
+}
+
+.section h4 {
+    margin:0;
+}
+
+.contact .actionButton {
+    max-width:200px;
+    margin: 1rem auto;
+
+}
+
+.contactInfo {
+    text-align:left;
+}

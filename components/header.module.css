@@ -5,6 +5,13 @@
 .nav {
     display:flex;
     height: 60px;
+    position: fixed;
+    top:0;
+    z-index: 3;
+    background-color: #f8f8f8;
+    width:100%;
+    text-align:center;
+    box-shadow: 0 0 5px grey;
 }
 
 .brandLinkItem {
@@ -13,8 +20,6 @@
     display:flex;
     justify-content: center;
     align-items: center;
-
-
 }
 .brandLink {
     font-size:1.5rem;
@@ -39,7 +44,7 @@
     position:absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -50,7 +55,7 @@
     position:absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     width: 60px;
     height: 60px;
     padding:1rem;
@@ -104,15 +109,18 @@
 
 .sidebar {
     left: -100%;
-    position:relative;
+    top:0;
+    position:fixed;
     visibility: visible;
     height:100vh;
     width: 75%;
     transition: all .4s ease 0s;
     background-color: #f8f8f8;
+    z-index: 1;
 }
 
 .sidebar ul {
+    margin-top:4rem;
     display:flex;
     flex-direction: column;
     align-items:flex-end;
@@ -129,5 +137,6 @@
 }
 
 .sidebar a:hover {
-    filter:brightness(50%);
+    /*TODO make this work */
+    filter:brightness(150%);
 }
