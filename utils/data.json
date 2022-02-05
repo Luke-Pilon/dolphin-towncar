@@ -1,0 +1,35 @@
+{"testimonials":[
+    {"content": "Thank you for being so helpful and friendly. He was all the above with all 4 categories."},
+    {"content": "Thanks for a great ride and conversation last night!"},
+    {"content": "Very friendly and a very clean vehicle."},
+    {"content": "Appreciated his help and kindness."}
+],
+"rates":[{
+    "from":"Downtown Minneapolis",
+    "to":"Minneapolis-Saint Paul Airport",
+    "cost": "$45"
+},{
+    "from": "Downtown Saint Paul",
+    "to": "Minneapolis-Saint Paul Airport",
+    "cost": "$45"
+},{
+    "from":"Downtown Minneapolis",
+    "to":"Mystic Lake Casino",
+    "cost":"$55"
+},{
+    "from":"Downtown Saint Paul",
+    "to":"Mystic Lake Casino",
+    "cost":"$65"
+},{
+    "from":"Downtown Minneapolis",
+    "to":"Other Minneapolis (University of Minnesota/Dinkytown, Uptown, South Minneapolis, etc)",
+    "cost":"$30"
+},{
+    "from":"Minneapolis",
+    "to":"Minneapolis Suburbs (Minnetonka, Eden Prairie, Plymouth, etc",
+    "cost":"$45"
+},{
+    "from":"Downtown Minneapolis",
+    "to":"Mall of America",
+    "cost":"50"
+}]}
