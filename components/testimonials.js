@@ -1,13 +1,17 @@
+import styles from './testimonials.module.css';
+
 export default function Testimonials({ testimonials }) {
-    console.log(testimonials);
     return (
-        <div>
-            {testimonials.map((testimonial, i) => (
-                <div key={i}>
-                    <p>{testimonial.content}</p>
-                </div>
-            ))}
-        </div>
+        <>
+            <h3>Testimonials</h3>
+            <div className={styles.testimonialContainer}>
+                {testimonials.map((testimonial, i) => (
+                    <div key={i} className={styles.testimonial}>
+                        <p>&quot;{testimonial.content}&quot;</p>
+                        {testimonial.name && <p>-{testimonial.name}</p>}
+                    </div>
+                ))}
+            </div>
+        </>
     );
 }
-//TODO style testimonials
