@@ -4,7 +4,9 @@ import Link from 'next/link';
 import styles from '../styles/index.module.css';
 import landingImage from '../public/suburban.jpg';
 import Testimonials from '../components/testimonials';
-let testimonials = require('../utils/testimonials.json');
+import Rates from '../components/rates';
+//testimonial and rates data
+let data = require('../utils/data.json');
 
 export default function Home() {
     return (
@@ -58,14 +60,16 @@ export default function Home() {
                 </p>
             </section>
             <section id='testimonials' className={styles.section}>
-                <Testimonials testimonials={testimonials.testimonials} />
+                <Testimonials testimonials={data.testimonials} />
             </section>
-
+            <section id='rates' className={styles.section}>
+                <Rates rates={data.rates} />
+            </section>
             <section
                 id='contact'
                 className={`${styles.contact} ${styles.section}`}
             >
-                <h4>Contact Us</h4>
+                <h3>Contact Us</h3>
                 <a
                     className={`${styles.actionButton} ${styles.solidButton}`}
                     href='tel:952-201-9725'
