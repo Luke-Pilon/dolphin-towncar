@@ -15,3 +15,4 @@ export default function Testimonials({ testimonials }) {
         </>
     );
 }
+//TODO make this a slider/carousel/'see more' element?
