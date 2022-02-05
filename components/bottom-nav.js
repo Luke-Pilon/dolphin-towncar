@@ -6,7 +6,7 @@ export default function BottomNav() {
         <nav className={styles.nav} role='navigation'>
             <ul className={styles.linkList}>
                 <li className={styles.linkListItem}>
-                    <Link href='/rates#quote' scroll={true}>
+                    <Link href='/#quote' scroll={true}>
                         <a className={styles.link}>
                             <span>Quote</span>
                         </a>
@@ -18,7 +18,7 @@ export default function BottomNav() {
                     </a>
                 </li>
                 <li className={styles.linkListItem}>
-                    <Link href='/rates'>
+                    <Link href='/#rates'>
                         <a className={styles.link}>
                             <span>Rates</span>
                         </a>
