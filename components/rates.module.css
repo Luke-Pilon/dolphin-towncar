@@ -1,0 +1,8 @@
+.ratesTable {
+    line-height: 1rem;
+    border-collapse: collapse;
+}
+
+.ratesTable tr {
+    border-top: 1px solid black;
+}
