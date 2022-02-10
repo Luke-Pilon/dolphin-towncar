@@ -1,25 +1,44 @@
 import { useForm } from 'react-hook-form';
 import styles from './quote.module.css';
+import { useState } from 'react';
 
 export default function Quote() {
     const {
         register,
         handleSubmit,
-        watch,
+        reset,
         formState: { errors, isSubmitting },
     } = useForm();
+    //message to display to user results of their form submission for a quote
+    const [message, setMessage] = useState(null);
+    //display message based on the result of the submission for three seconds, then clear message
+    //also reset form data if the submission was successful
+    const submissionResult = (result) => {
+        result
+            ? (setMessage(
+                  'Thanks! We have received your request for a quote and will contact you promptly.'
+              ),
+              reset())
+            : setMessage(
+                  "We're sorry, there was an issue with your quote request. Please try again."
+              );
+        setTimeout(() => setMessage(null), 3000);
+    };
     const onSubmit = async (data) => {
-        //await new Promise((r) => setTimeout(r, 2000));
         return new Promise((resolve) => {
             fetch('/api/quote', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data),
-            }).then(resolve());
+            })
+                .then((response) => response.json())
+                .then(({ successful }) => submissionResult(successful))
+                .then(resolve())
+                .catch(submissionResult(false));
         });
     };
     return (
-        <>
+        <div id='quote'>
             <p>Don&apos;t see your trip listed above? Request a quote here:</p>
             <form
                 className={styles.quoteForm}
@@ -44,7 +63,7 @@ export default function Quote() {
                 {errors.name && (
                     <p className={styles.errorMessage}>{errors.name.message}</p>
                 )}
-                <label htmlFor='tel'>Telephone (optional):</label>
+                <label htmlFor='tel'>Telephone:</label>
                 <input
                     type='tel'
                     id='tel'
@@ -123,7 +142,8 @@ export default function Quote() {
                         className={styles.quoteSubmit}
                     ></input>
                 )}
+                {message && <p>{message}</p>}
             </form>
-        </>
+        </div>
     );
 }
