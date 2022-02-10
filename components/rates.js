@@ -1,4 +1,3 @@
-import Quote from './quote';
 import styles from './rates.module.css';
 
 export default function Rates({ rates }) {
@@ -23,7 +22,6 @@ export default function Rates({ rates }) {
                     ))}
                 </tbody>
             </table>
-            <Quote />
         </>
     );
 }

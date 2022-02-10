@@ -5,6 +5,7 @@ import styles from '../styles/index.module.css';
 import landingImage from '../public/suburban.jpg';
 import Testimonials from '../components/testimonials';
 import Rates from '../components/rates';
+import Quote from '../components/quote';
 //testimonial and rates data
 let data = require('../utils/data.json');
 
@@ -33,7 +34,7 @@ export default function Home() {
                 </p>
                 <p>Call us 24 hours a day, 7 days a week!</p>
                 <div className={styles.actionButtonsContainer}>
-                    <Link href='/rates#quote' scroll={false}>
+                    <Link href='/#quote' scroll={false}>
                         <a
                             className={`${styles.actionButton} ${styles.borderButton}`}
                         >
@@ -64,6 +65,7 @@ export default function Home() {
             </section>
             <section id='rates' className={styles.section}>
                 <Rates rates={data.rates} />
+                <Quote id='quote' />
             </section>
             <section
                 id='contact'
