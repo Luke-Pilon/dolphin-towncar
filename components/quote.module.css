@@ -1,0 +1,78 @@
+.quoteForm {
+    text-align:left;
+}
+
+
+.quoteForm .input:not([type=submit]) {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;    width:100%;
+    margin-bottom:.75rem;
+    padding: .5rem 1rem;
+    outline: 1px solid #aaa;
+    transition: all .05s linear;
+    font-family: inherit;
+    font-size:inherit;
+}
+.quoteForm .input:focus {
+    outline:2px solid var(--brand-primary);
+}
+
+.quoteSubmit {
+    background-color: var(--brand-primary);
+    display:block;
+    padding: .5rem 1rem;
+    margin: 0;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius:10px;
+    font-weight:600;
+    transition: all .4s ease 0s;
+    color:white;
+    margin:auto;
+    min-width:200px;
+}
+
+.quoteSubmit:hover{
+    cursor: pointer;
+    background-color:#384061;
+}
+
+.errorMessage {
+    margin-top: -.75rem!important;
+    color:red;
+}
+
+.spinner {
+    display:block;
+    margin:auto;
+    width:2rem;
+    height:2rem;
+    border-radius:50%;
+    border: .25rem solid #f3f3f3;
+    border-top: .25rem solid var(--brand-primary);
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } 
+
+  @-moz-keyframes spin {
+    from { -moz-transform: scale( 1 ) rotate( 0deg );   }
+    to   { -moz-transform: scale( 1 ) rotate( 360deg ); }
+  }
