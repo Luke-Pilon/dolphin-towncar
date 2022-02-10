@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -23,6 +24,11 @@ ul {
 
 :root {
   --brand-primary: #4b5683;
+}
+
+/*Prevents fixed position header from covering top of the element when scrolled to via an anchor tag*/
+#rates,#testimonials,#about,#contact,#quote {
+  scroll-margin-top:60px;
 }
 
 /* Input element CSS reset */
