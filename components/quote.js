@@ -22,7 +22,7 @@ export default function Quote() {
             : setMessage(
                   "We're sorry, there was an issue with your quote request. Please try again."
               );
-        setTimeout(() => setMessage(null), 3000);
+        setTimeout(() => setMessage(null), 5000);
     };
     const onSubmit = async (data) => {
         return new Promise((resolve) => {
@@ -34,12 +34,19 @@ export default function Quote() {
                 .then((response) => response.json())
                 .then(({ successful }) => submissionResult(successful))
                 .then(resolve())
-                .catch(submissionResult(false));
+                .catch(
+                    isSubmitting &&
+                        setMessage(
+                            "We're sorry, there was an issue with your quote request. Please try again."
+                        )
+                );
         });
     };
     return (
         <div id='quote'>
-            <p>Don&apos;t see your trip listed above? Request a quote here:</p>
+            <h4>
+                Don&apos;t see your trip listed above? Request a quote here:
+            </h4>
             <form
                 className={styles.quoteForm}
                 onSubmit={handleSubmit(onSubmit)}
