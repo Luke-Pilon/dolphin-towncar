@@ -1,3 +1,7 @@
 export default function Footer() {
-    return <footer></footer>;
+    return (
+        <footer>
+            <div style={{ clear: 'both', height: '65px' }}></div>
+        </footer>
+    );
 }

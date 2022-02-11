@@ -9,7 +9,6 @@ export default function Layout({ children }) {
         <>
             <Header />
             <main>{children}</main>
-            <div style={{ clear: 'both', height: '65px' }}></div>
             <BottomNav />
             <Footer />
         </>
