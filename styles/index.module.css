@@ -8,6 +8,12 @@
     background-size:cover;
 }
 
+@media screen and (min-width: 768px){
+    .landing {
+        background-position: 50% 50%;
+    }
+}
+
 .landingContentContainer {
     width: 90%;
     margin:auto;
