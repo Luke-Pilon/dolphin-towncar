@@ -1,0 +1,7 @@
+.nav {
+    height: 60px;
+}
+
+.nav ul {
+    display:flex;
+}
