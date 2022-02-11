@@ -1,8 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/index.module.css';
-import landingImage from '../public/suburban.jpg';
 import Testimonials from '../components/testimonials';
 import Rates from '../components/rates';
 import Quote from '../components/quote';
@@ -20,44 +19,48 @@ export default function Home() {
                 />
             </Head>
             <section id='landing' className={styles.landing}>
-                <Image
-                    src={landingImage}
-                    alt='Picture of Black Chevrolet Suburban Towncar'
-                    priority
-                />
-                <h1>Dolphin Limo Ride</h1>
-
-                <p>
-                    High Quality and Affordable towncar service for the Twin
-                    Cities, Minneapolis-St Paul International Airport, and the
-                    suburbs
-                </p>
-                <p>Call us 24 hours a day, 7 days a week!</p>
-                <div className={styles.actionButtonsContainer}>
-                    <Link href='/#quote' scroll={false}>
+                <div className={styles.landingContentContainer}>
+                    <h1>Dolphin Limo Ride</h1>
+                    <h3>
+                        High Quality and Affordable towncar service for the Twin
+                        Cities, Minneapolis-St Paul International Airport, and
+                        the suburbs
+                    </h3>
+                    <h4>Call us 24 hours a day, 7 days a week!</h4>
+                    <div className={styles.actionButtonsContainer}>
+                        <Link href='/#quote' scroll={false}>
+                            <a
+                                className={`${styles.actionButton} ${styles.borderButton}`}
+                            >
+                                Get Quote
+                            </a>
+                        </Link>
                         <a
-                            className={`${styles.actionButton} ${styles.borderButton}`}
+                            className={`${styles.actionButton} ${styles.solidButton}`}
+                            href='tel:952-201-9725'
                         >
-                            Get Quote
+                            Call Now
+                            <br />
+                            952-201-9725
                         </a>
-                    </Link>
-                    <a
-                        className={`${styles.actionButton} ${styles.solidButton}`}
-                        href='tel:952-201-9725'
-                    >
-                        Call Now
-                        <br />
-                        952-201-9725
-                    </a>
+                    </div>
                 </div>
             </section>
             <section id='about' className={styles.section}>
+                <h3>Our Mission</h3>
                 <p>
                     Dolphin Limo is your premier transportation solution in the
-                    Twin Cities. In addition to the cities of Minneapolis and
-                    Saint Paul, we service destinations such as the
-                    Minneapolis-Saint Paul International Airport, Mystic Lake
-                    Casino, Canterbury Park, and the Twin Cities suburbs.
+                    Twin Cities. Our Chevrolet Suburban towncars can get you
+                    wherever you need no matter the weather. We are always on
+                    time and available any hour of the day or night. Our drivers
+                    are professional, licensed, and insured.
+                </p>
+                <br />
+                <p>
+                    In addition to the cities of Minneapolis and Saint Paul, we
+                    service destinations such as the Minneapolis-Saint Paul
+                    International Airport, Mystic Lake Casino, Canterbury Park,
+                    and the Twin Cities suburbs.
                 </p>
             </section>
             <section id='testimonials' className={styles.section}>
