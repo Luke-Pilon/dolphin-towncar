@@ -1,5 +1,4 @@
 .testimonialContainer {
-    margin-top:1rem;
     display:grid;
     grid-template-columns: repeat(auto-fill, 150px);
     grid-gap: 1rem;
