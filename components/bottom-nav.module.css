@@ -8,6 +8,13 @@
     background-color: white;
 }
 
+@media screen and (min-width: 768px){
+    .nav {
+        display:none;
+        width:0%;
+    }
+}
+
 .linkList {
     display:flex;
     height:100%;
@@ -27,3 +34,4 @@
     justify-content: center;
     flex-grow:1;
 }
+
