@@ -2,6 +2,21 @@
     height: 60px;
 }
 
-.nav ul {
+.navList {
     display:flex;
+    font-size: 1.25rem;
+    justify-content:flex-end;   
 }
+
+.navListItem {
+    padding:1rem;
+    color:white;
+}
+
+.navListItem a {
+    transition: color .3s ease-in-out;
+}
+.navListItem a:hover {
+    opacity: .75;
+}
+

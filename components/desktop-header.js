@@ -4,23 +4,23 @@ import Link from 'next/link';
 export default function DesktopHeader() {
     return (
         <nav className={styles.nav}>
-            <ul>
-                <li>
+            <ul className={styles.navList}>
+                <li className={styles.navListItem}>
                     <Link href='/#rates'>
                         <a>Rates</a>
                     </Link>
                 </li>
-                <li>
+                <li className={styles.navListItem}>
                     <Link href='/#testimonials'>
                         <a>Testimonials</a>
                     </Link>
                 </li>
-                <li>
+                <li className={styles.navListItem}>
                     <Link href='/#about'>
                         <a>About</a>
                     </Link>
                 </li>
-                <li>
+                <li className={styles.navListItem}>
                     <Link href='/#contact'>
                         <a>Contact</a>
                     </Link>

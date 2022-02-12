@@ -5,8 +5,28 @@
 .quoteForm {
     text-align:left;
     margin-top:1rem;
+    margin-bottom:.5rem;
+    display:flex;
+    flex-flow: row wrap;
+    align-items:center;
+    gap:1rem;
 }
 
+.formFlexItem {
+    flex: 1 0 250px;
+    display:flex;
+    flex-direction: column;
+}
+
+.formFlexItem:last-of-type {
+    min-width:100%;
+}
+/*
+@media screen and (min-width:800px){
+    .quoteForm {
+        flex-flow: column wrap;
+    }
+}*/
 
 .quoteForm .input:not([type=submit]) {
     border:none;
@@ -14,7 +34,7 @@
     background-color:transparent;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;    width:100%;
+    box-shadow: none;    
     margin-bottom:.75rem;
     padding: .5rem 1rem;
     outline: 1px solid #aaa;

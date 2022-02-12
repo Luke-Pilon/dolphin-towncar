@@ -2,7 +2,7 @@ import styles from './rates.module.css';
 
 export default function Rates({ rates }) {
     return (
-        <>
+        <div className={styles.ratesContainer}>
             <h3>Rates</h3>
             <table className={styles.ratesTable}>
                 <thead>
@@ -22,6 +22,6 @@ export default function Rates({ rates }) {
                     ))}
                 </tbody>
             </table>
-        </>
+        </div>
     );
 }

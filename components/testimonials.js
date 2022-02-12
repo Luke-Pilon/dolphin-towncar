@@ -3,7 +3,7 @@ import styles from './testimonials.module.css';
 export default function Testimonials({ testimonials }) {
     return (
         <>
-            <h3>Testimonials</h3>
+            <h1 className={styles.heading}>Testimonials</h1>
             <div className={styles.testimonialContainer}>
                 {testimonials.map((testimonial, i) => (
                     <div key={i} className={styles.testimonial}>

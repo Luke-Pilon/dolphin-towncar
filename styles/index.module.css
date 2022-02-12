@@ -8,12 +8,6 @@
     background-size:cover;
 }
 
-@media screen and (min-width: 768px){
-    .landing {
-        background-position: 50% 50%;
-    }
-}
-
 .landingContentContainer {
     width: 90%;
     margin:auto;
@@ -26,6 +20,14 @@
     margin-top:0;
     padding-top:120px;
     -webkit-text-stroke: .5px white;
+}
+
+.landing h3 {
+    color:white;
+}
+
+.landing h4 {
+    color:white;
 }
 
 .actionButtonsContainer {
@@ -85,6 +87,34 @@
     border-top: 1px solid var(--brand-primary);
 }
 
+.about {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 0 4rem;
+
+}
+
+.mission {
+    flex: 1 1 400px;
+    margin-bottom:.5rem;
+}
+.testimonials {
+    flex: 1 1 400px;
+}
+
+.rates {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0 4rem;
+}
+
+.rates > * {
+    flex: 1 1 500px;
+    text-align: center;
+}
+
 .section p {
     margin:0;
 }
@@ -99,6 +129,10 @@
     color: var(--brand-primary);
 }
 
+#testimonials h3 {
+    margin-top:.5rem;
+}
+
 .contact .actionButton {
     max-width:200px;
     margin: 1rem auto;
@@ -106,5 +140,19 @@
 }
 
 .contactInfo {
+    display:inline-block;
     text-align:left;
+    margin:auto;
+}
+
+@media screen and (min-width: 768px){
+    .landing {
+        background-position: 50% 50%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .landing h1 {
+        padding-top:0;
+    }
 }

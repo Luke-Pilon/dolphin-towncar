@@ -10,7 +10,7 @@ let data = require('../utils/data.json');
 
 export default function Home() {
     return (
-        <div>
+        <>
             <Head>
                 <title>Dolphin Limo Transportation Services</title>
                 <meta
@@ -46,27 +46,31 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-            <section id='about' className={styles.section}>
-                <h3>Our Mission</h3>
-                <p>
-                    Dolphin Limo is your premier transportation solution in the
-                    Twin Cities. Our Chevrolet Suburban towncars can get you
-                    wherever you need no matter the weather. We are always on
-                    time and available any hour of the day or night. Our drivers
-                    are professional, licensed, and insured.
-                </p>
-                <br />
-                <p>
-                    In addition to the cities of Minneapolis and Saint Paul, we
-                    service destinations such as the Minneapolis-Saint Paul
-                    International Airport, Mystic Lake Casino, Canterbury Park,
-                    and the Twin Cities suburbs.
-                </p>
+            <section id='about' className={`${styles.section} ${styles.about}`}>
+                <div className={styles.mission}>
+                    <h1>Our Mission</h1>
+                    <p>
+                        Dolphin Limo is your premier transportation solution in
+                        the Twin Cities. Our Chevrolet Suburban towncars can get
+                        you wherever you need no matter the weather. We are
+                        always on time and available any hour of the day or
+                        night. Our drivers are professional, licensed, and
+                        insured.
+                    </p>
+                    <br />
+                    <p>
+                        In addition to the cities of Minneapolis and Saint Paul,
+                        we service destinations such as the Minneapolis-Saint
+                        Paul International Airport, Mystic Lake Casino,
+                        Canterbury Park, and the Twin Cities suburbs.
+                    </p>
+                </div>
+                <div id='testimonials' className={styles.testimonials}>
+                    <Testimonials testimonials={data.testimonials} />
+                </div>
             </section>
-            <section id='testimonials' className={styles.section}>
-                <Testimonials testimonials={data.testimonials} />
-            </section>
-            <section id='rates' className={styles.section}>
+
+            <section id='rates' className={`${styles.section} ${styles.rates}`}>
                 <Rates rates={data.rates} />
                 <Quote id='quote' />
             </section>
@@ -98,6 +102,6 @@ export default function Home() {
                     </p>
                 </div>
             </section>
-        </div>
+        </>
     );
 }

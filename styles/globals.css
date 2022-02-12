@@ -22,6 +22,10 @@ ul {
   margin:0;
 }
 
+main h1,h2,h3,h4 {
+  color:var(--brand-primary);
+}
+
 :root {
   --brand-primary: #4b5683;
 }

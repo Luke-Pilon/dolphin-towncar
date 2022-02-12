@@ -1,0 +1,10 @@
+.footer {
+    margin-top:2rem;
+    width:100%;
+    height:auto;
+    background-color:var(--brand-primary);
+    padding:1.5rem ;
+    color:#f5f3f3;
+    text-align: center;
+    font-size: .9rem;
+}
