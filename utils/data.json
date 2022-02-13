@@ -7,19 +7,19 @@
 "rates":[{
     "from":"Downtown Minneapolis",
     "to":"Minneapolis-Saint Paul Airport",
-    "cost": "$45"
+    "cost": "$60"
 },{
     "from": "Downtown Saint Paul",
     "to": "Minneapolis-Saint Paul Airport",
-    "cost": "$45"
+    "cost": "$60"
 },{
     "from":"Downtown Minneapolis",
     "to":"Mystic Lake Casino",
-    "cost":"$55"
+    "cost":"$100"
 },{
     "from":"Downtown Saint Paul",
     "to":"Mystic Lake Casino",
-    "cost":"$65"
+    "cost":"$100"
 },{
     "from":"Downtown Minneapolis",
     "to":"Other Minneapolis (University of Minnesota, Uptown, etc)",
@@ -27,9 +27,9 @@
 },{
     "from":"Minneapolis",
     "to":"Minneapolis Suburbs (Minnetonka, Eden Prairie, Plymouth, etc)",
-    "cost":"$45"
+    "cost":"$65"
 },{
     "from":"Downtown Minneapolis",
     "to":"Mall of America",
-    "cost":"$50"
+    "cost":"$60"
 }]}

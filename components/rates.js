@@ -20,8 +20,16 @@ export default function Rates({ rates }) {
                             <td className={styles.tableCell}>{rate.cost}</td>
                         </tr>
                     ))}
+                    <tr>
+                        <td className={styles.tableCell}>Hourly Rate:</td>
+                        <td className={styles.tableCell}>
+                            $120 (minimum 2 hours)
+                        </td>
+                        <td className={styles.tableCell}></td>
+                    </tr>
                 </tbody>
             </table>
+            <p>All other trips based off of mileage and time.</p>
         </div>
     );
 }
