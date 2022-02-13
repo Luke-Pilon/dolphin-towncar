@@ -139,6 +139,5 @@
 }
 
 .sidebar a:hover {
-    /*TODO make this work */
     filter:brightness(150%);
 }
