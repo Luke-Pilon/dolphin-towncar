@@ -20,7 +20,7 @@ export default function Home() {
             </Head>
             <section id='landing' className={styles.landing}>
                 <div className={styles.landingContentContainer}>
-                    <h1>Dolphin Limo Ride</h1>
+                    <h1>Dolphin Limo LLC</h1>
                     <h3>
                         High Quality and Affordable towncar service for the Twin
                         Cities, Minneapolis-St Paul International Airport, and
@@ -53,9 +53,10 @@ export default function Home() {
                         Dolphin Limo is your premier transportation solution in
                         the Twin Cities. Our Chevrolet Suburban towncars can get
                         you wherever you need no matter the weather. We are
-                        always on time and available any hour of the day or
-                        night. Our drivers are professional, licensed, and
-                        insured.
+                        available any time of the day or night, and with 15
+                        years of experience in the area, you can count on us to
+                        for any and all of your transportation needs. Our
+                        drivers are professional, licensed, and insured.
                     </p>
                     <br />
                     <p>
@@ -96,9 +97,6 @@ export default function Home() {
                     <p>Mon-Sun Open 24 Hours</p>
                     <p>
                         <b>Email:</b> reef1960@gmail.com
-                    </p>
-                    <p>
-                        <b>Address:</b> 1374 Westminster St Saint Paul, MN 55130
                     </p>
                 </div>
             </section>
