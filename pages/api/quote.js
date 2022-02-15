@@ -3,16 +3,19 @@ export default function handler(req, res) {
         const accountSid = process.env.TWILIO_ACCOUNT_SID;
         const authToken = process.env.TWILIO_AUTH_TOKEN;
         const from = process.env.TWILIO_PHONE_NUMBER;
+        const to = process.env.TWILIO_RECEIVER_PHONE_NUMBER;
         const client = require('twilio')(accountSid, authToken);
-        /*
         client.messages
             .create({
                 body: 'testing',
                 from: from,
-                to: '+16512311655',
+                to: to,
             })
-            .then((message) => console.log(message.status));
-            */
-        res.status(200).json({ successful: true });
+            .then((message) => {
+                message.status !== 'failed'
+                    ? res.status(200).json({ successful: true })
+                    : res.status(200).json({ successful: false });
+            })
+            .catch(res.status(500).json({ successful: false }));
     }
 }
