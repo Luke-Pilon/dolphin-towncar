@@ -7,6 +7,10 @@ class MyDocument extends Document {
                 <Head>
                     <meta charSet='UTF-8' />
                     <link rel='icon' href='/logo.png' />
+                    <link
+                        href='https://fonts.googleapis.com/css2?family=Roboto&display=swap'
+                        rel='stylesheet'
+                    />
                 </Head>
                 <body>
                     <Main />
