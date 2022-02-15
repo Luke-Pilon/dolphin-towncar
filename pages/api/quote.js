@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+export default async function handler(req, res) {
     if (req.method === 'POST') {
         const accountSid = process.env.TWILIO_ACCOUNT_SID;
         const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -16,6 +16,10 @@ export default function handler(req, res) {
                     ? res.status(200).json({ successful: true })
                     : res.status(200).json({ successful: false });
             })
-            .catch(res.status(500).json({ successful: false }));
+            .catch((error) => {
+                if (error) {
+                    res.status(500).json({ successful: false });
+                }
+            });
     }
 }

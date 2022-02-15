@@ -24,7 +24,7 @@ export default function Quote() {
               );
         setTimeout(() => setMessage(null), 5000);
     };
-    const onSubmit = async (data) => {
+    const onSubmit = (data) => {
         return new Promise((resolve) => {
             fetch('/api/quote', {
                 method: 'POST',
@@ -150,7 +150,6 @@ export default function Quote() {
                         </p>
                     )}
                 </div>
-                {isSubmitting && <span className={styles.spinner}></span>}
                 {!isSubmitting && (
                     <input
                         type='submit'
@@ -160,6 +159,7 @@ export default function Quote() {
                 )}
                 {message && <p>{message}</p>}
             </form>
+            {isSubmitting && <span className={styles.spinner}></span>}
         </div>
     );
 }

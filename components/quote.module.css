@@ -99,5 +99,5 @@
 
   @-moz-keyframes spin {
     from { -moz-transform: scale( 1 ) rotate( 0deg );   }
-    to   { -moz-transform: scale( 1 ) rotate( 360deg ); }
+    to { -moz-transform: scale( 1 ) rotate( 360deg ); }
   }
