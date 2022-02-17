@@ -5,6 +5,7 @@ import styles from '../styles/index.module.css';
 import Testimonials from '../components/testimonials';
 import Rates from '../components/rates';
 import Quote from '../components/quote';
+import landingImage from '../public/skyline2.jpg';
 //testimonial and rates data
 let data = require('../utils/data.json');
 
@@ -22,7 +23,7 @@ export default function Home() {
                 <div className={styles.bgWrap}>
                     <Image
                         alt='Minneapolis'
-                        src='/skyline2.jpg'
+                        src={landingImage}
                         layout='fill'
                         objectFit='cover'
                         quality={100}
