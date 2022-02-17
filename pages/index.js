@@ -19,6 +19,15 @@ export default function Home() {
                 />
             </Head>
             <section id='landing' className={styles.landing}>
+                <div className={styles.bgWrap}>
+                    <Image
+                        alt='Minneapolis'
+                        src='/skyline2.jpg'
+                        layout='fill'
+                        objectFit='cover'
+                        quality={100}
+                    ></Image>
+                </div>
                 <div className={styles.landingContentContainer}>
                     <h1>Dolphin Limo LLC</h1>
                     <h3>
