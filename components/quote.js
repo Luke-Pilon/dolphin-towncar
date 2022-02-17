@@ -25,7 +25,7 @@ export default function Quote() {
         setTimeout(() => setMessage(null), 5000);
     };
     const onSubmit = (data) => {
-        return new Promise((resolve) => {
+        return new Promise(() => {
             fetch('/api/quote', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -33,7 +33,6 @@ export default function Quote() {
             })
                 .then((response) => response.json())
                 .then(({ successful }) => submissionResult(successful))
-                .then(resolve())
                 .catch(
                     isSubmitting &&
                         setMessage(
