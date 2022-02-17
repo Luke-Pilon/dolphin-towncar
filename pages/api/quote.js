@@ -1,3 +1,5 @@
+import formatTwilioMessage from '../../utils/formatTwilioMessage';
+
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const accountSid = process.env.TWILIO_ACCOUNT_SID;
@@ -5,9 +7,10 @@ export default async function handler(req, res) {
         const from = process.env.TWILIO_PHONE_NUMBER;
         const to = process.env.TWILIO_RECEIVER_PHONE_NUMBER;
         const client = require('twilio')(accountSid, authToken);
+        const body = formatTwilioMessage(req.body);
         client.messages
             .create({
-                body: 'testing',
+                body: body,
                 from: from,
                 to: to,
             })
@@ -17,9 +20,7 @@ export default async function handler(req, res) {
                     : res.status(200).json({ successful: false });
             })
             .catch((error) => {
-                if (error) {
-                    res.status(500).json({ successful: false });
-                }
+                res.status(500).json({ successful: false });
             });
-    }
+    } else res.status(400);
 }
