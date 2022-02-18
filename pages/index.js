@@ -26,7 +26,8 @@ export default function Home() {
                         src={landingImage}
                         layout='fill'
                         objectFit='cover'
-                        quality={100}
+                        placeholder='blur'
+                        priority
                     ></Image>
                 </div>
                 <div className={styles.landingContentContainer}>
