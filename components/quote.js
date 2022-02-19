@@ -43,7 +43,7 @@ export default function Quote() {
     };
     return (
         <div id='quote'>
-            <h3>Don&apos;t see your trip listed? Request a quote here:</h3>
+            <h2>Don&apos;t see your trip listed? Request a quote here:</h2>
             <form
                 className={styles.quoteForm}
                 onSubmit={handleSubmit(onSubmit)}
@@ -98,9 +98,7 @@ export default function Quote() {
                     )}
                 </div>
                 <div className={styles.formFlexItem}>
-                    <label htmlFor='email' id='email'>
-                        Email:
-                    </label>
+                    <label htmlFor='email'>Email:</label>
                     <input
                         type='email'
                         id='email'
@@ -122,9 +120,7 @@ export default function Quote() {
                 </div>
 
                 <div className={styles.formFlexItem}>
-                    <label htmlFor='request' id='request'>
-                        How can we help you?
-                    </label>
+                    <label htmlFor='request'>How can we help you?</label>
                     <textarea
                         id='request'
                         name='request'

@@ -3,7 +3,7 @@ import styles from './rates.module.css';
 export default function Rates({ rates }) {
     return (
         <div className={styles.ratesContainer}>
-            <h3>Rates</h3>
+            <h1>Rates</h1>
             <table className={styles.ratesTable}>
                 <thead>
                     <tr>

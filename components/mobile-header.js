@@ -30,16 +30,15 @@ export default function MobileHeader() {
     return (
         <header className={styles.header} id='header'>
             <nav className={styles.nav}>
-                <a
-                    className={styles.sidebarToggle}
-                    id='sidebar-toggle'
-                    aria-label='Open navigation menu'
-                >
+                <a className={styles.sidebarToggle} id='sidebar-toggle'>
+                    <label htmlFor='toggle'></label>
                     <input
                         /* This checkbox controls the display of the hamburger (either hamburger when sidebar is closed or an X when open) */
                         type='checkbox'
                         className={styles.toggler}
                         id='toggle'
+                        name='toggle'
+                        aria-label='Open navigation menu'
                     />
                     <div className={styles.hamburger} aria-hidden='true'>
                         <div></div>

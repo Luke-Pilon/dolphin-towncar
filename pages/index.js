@@ -32,12 +32,12 @@ export default function Home() {
                 </div>
                 <div className={styles.landingContentContainer}>
                     <h1>Dolphin Limo LLC</h1>
-                    <h3>
+                    <h2>
                         High Quality and Affordable towncar service for the Twin
                         Cities, Minneapolis-St Paul International Airport, and
                         the suburbs
-                    </h3>
-                    <h4>Call us 24 hours a day, 7 days a week!</h4>
+                    </h2>
+                    <h3>Call us 24 hours a day, 7 days a week!</h3>
                     <div className={styles.actionButtonsContainer}>
                         <Link href='/#quote' scroll={false}>
                             <a
@@ -90,7 +90,7 @@ export default function Home() {
                 id='contact'
                 className={`${styles.contact} ${styles.section}`}
             >
-                <h3>Contact Us</h3>
+                <h1>Contact Us</h1>
                 <a
                     className={`${styles.actionButton} ${styles.solidButton}`}
                     href='tel:952-201-9725'

@@ -33,12 +33,11 @@
      -1px 1px 0 white,
       1px 1px 0 white;
 }
-
-.landing h3 {
+.landing h2 {
     color:white;
 }
 
-.landing h4 {
+.landing h3 {
     color:white;
 }
 
@@ -131,17 +130,18 @@
     margin:0;
 }
     
-.section h3 {
+.section h1 {
     margin:0;
     margin-bottom:.5rem;
     color: var(--brand-primary);
 }
 
-.section h4 {
+.section h2 {
+    font-size:1.25rem;
     color: var(--brand-primary);
 }
 
-#testimonials h3 {
+#testimonials h1 {
     margin-top:.5rem;
 }
 
