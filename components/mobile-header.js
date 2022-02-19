@@ -30,7 +30,7 @@ export default function MobileHeader() {
     return (
         <header className={styles.header} id='header'>
             <nav className={styles.nav}>
-                <a className={styles.sidebarToggle} id='sidebar-toggle'>
+                <div className={styles.sidebarToggle} id='sidebar-toggle'>
                     <label htmlFor='toggle'></label>
                     <input
                         /* This checkbox controls the display of the hamburger (either hamburger when sidebar is closed or an X when open) */
@@ -43,7 +43,7 @@ export default function MobileHeader() {
                     <div className={styles.hamburger} aria-hidden='true'>
                         <div></div>
                     </div>
-                </a>
+                </div>
                 <div className={styles.brandLinkItem}>
                     <Link href='/' /*TODO center text in viewport */>
                         <a className={styles.brandLink}>Dolphin Limo LLC</a>
