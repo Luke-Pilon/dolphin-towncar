@@ -9,24 +9,28 @@
 }
 
 .bgWrap {
-    position: absolute;
+    position: relative;
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    z-index: -1;
     filter: brightness(50%);
 }
 .landingContentContainer {
     width: 90%;
     margin:auto;
+    max-width:696px;
     color:white;
+    z-index: 1;
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
 }
 
 .landing h1 {
     color:var(--brand-primary);
     font-size: 3rem;
     margin-top:0;
-    padding-top:120px;
     text-shadow:
     -1px -1px 0 white,  
      1px -1px 0 white,
@@ -159,7 +163,7 @@
 
 @media screen and (min-width: 768px){
     .landing {
-        background-position: 50% 50%;
+        object-position: 50% 50%;
         display:flex;
         align-items: center;
         justify-content: center;
